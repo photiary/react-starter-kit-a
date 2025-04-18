@@ -19,8 +19,15 @@ function App() {
                         alt="React logo"
                     />
                 </a>
+                <a href="https://prettier.dev" target="_blank">
+                    <img
+                        src="https://prettier.io/icon.png"
+                        className="logo prettier"
+                        alt="Prettier logo"
+                    />
+                </a>
             </div>
-            <h1>Vite + React</h1>
+            <h1>Vite + React + Prettier</h1>
             <div className="card">
                 <button onClick={() => setCount((count) => count + 1)}>
                     count is {count}
