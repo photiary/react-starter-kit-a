@@ -110,3 +110,20 @@ pnpm add -D eslint-plugin-prettier
 ```shell
 pnpm prettier . --write
 ```
+
+# Redux
+
+- https://redux.js.org/introduction/installation#complementary-packages
+
+```shell
+pnpm add @reduxjs/toolkit
+
+pnpm add react-redux
+```
+
+- `@` import 에서 참조할 수 있도록 추가
+
+```shell
+pnpm add -D @types/node
+```
+
