@@ -2,7 +2,7 @@
 
 ### 사용 패키지
 
-React + TypeScript + Vite + ESLint + Prettier + Redux
+React + TypeScript + Vite + ESLint + Prettier + Redux + Axios
 
 ### React
 
