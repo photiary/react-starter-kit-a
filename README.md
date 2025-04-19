@@ -2,7 +2,7 @@
 
 ### 사용 패키지
 
-React + TypeScript + Vite + ESLint + Prettier + Redux
+React + TypeScript + Vite + ESLint + Prettier + Redux + Axios
 
 ### React
 
@@ -164,3 +164,19 @@ export default defineConfig({
 ### template 리소스
 
 - https://github.com/reduxjs/redux-templates/tree/master/packages/vite-template-redux
+
+# 🥓 Axios
+
+- https://axios-http.com/docs/intro
+
+```shell
+pnpm add axios
+```
+
+### axios-mock-adapter
+
+- https://www.npmjs.com/package/axios-mock-adapter
+
+```shell
+pnpm add -D axios-mock-adapter
+```
