@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# React Starter kit
+
+### 사용 패키지
+
+React + TypeScript + Vite + ESLint + Prettier + Redux
+
+### React
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -13,21 +19,21 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default tseslint.config({
-    extends: [
-        // Remove ...tseslint.configs.recommended and replace with this
-        ...tseslint.configs.recommendedTypeChecked,
-        // Alternatively, use this for stricter rules
-        ...tseslint.configs.strictTypeChecked,
-        // Optionally, add this for stylistic rules
-        ...tseslint.configs.stylisticTypeChecked,
-    ],
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ['./tsconfig.node.json', './tsconfig.app.json'],
-            tsconfigRootDir: import.meta.dirname,
-        },
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
     },
+  },
 })
 ```
 
@@ -39,17 +45,17 @@ import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
 
 export default tseslint.config({
-    plugins: {
-        // Add the react-x and react-dom plugins
-        'react-x': reactX,
-        'react-dom': reactDom,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended typescript rules
-        ...reactX.configs['recommended-typescript'].rules,
-        ...reactDom.configs.recommended.rules,
-    },
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
 })
 ```
 
@@ -76,9 +82,9 @@ node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncov
  * @type {import("prettier").Config}
  */
 const config = {
-    singleQuote: true,
-    trailingComma: 'es5',
-    endOfLine: 'auto', // LF|CRLF 자동으로 개행문자 사용 https://prettier.io/docs/en/options.html#end-of-line
+  singleQuote: true,
+  trailingComma: 'es5',
+  endOfLine: 'auto', // LF|CRLF 자동으로 개행문자 사용 https://prettier.io/docs/en/options.html#end-of-line
 }
 
 export default config
@@ -110,3 +116,51 @@ pnpm add -D eslint-plugin-prettier
 ```shell
 pnpm prettier . --write
 ```
+
+# Redux
+
+- https://redux.js.org/introduction/installation#complementary-packages
+
+```shell
+pnpm add @reduxjs/toolkit
+
+pnpm add react-redux
+```
+
+- `@` import 에서 참조할 수 있도록 추가
+
+```shell
+pnpm add -D @types/node
+```
+
+```typescript
+// vite.config.ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+
+export default defineConfig({
+    plugins: [react()],
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'src')  // src 폴더를 @로 사용
+        }
+    }
+})
+```
+
+`tsconfig.app.json`
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
+```
+
+### template 리소스
+
+- https://github.com/reduxjs/redux-templates/tree/master/packages/vite-template-redux
