@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# React Starter kit
+
+### 사용 패키지
+
+React + TypeScript + Vite + ESLint + Prettier + Redux
+
+### React
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -126,3 +132,35 @@ pnpm add react-redux
 ```shell
 pnpm add -D @types/node
 ```
+
+```typescript
+// vite.config.ts
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+
+export default defineConfig({
+    plugins: [react()],
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'src')  // src 폴더를 @로 사용
+        }
+    }
+})
+```
+
+`tsconfig.app.json`
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
+```
+
+### template 리소스
+
+- https://github.com/reduxjs/redux-templates/tree/master/packages/vite-template-redux

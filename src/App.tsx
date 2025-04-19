@@ -25,8 +25,15 @@ function App() {
             alt="Prettier logo"
           />
         </a>
+        <a href="https://redux.js.org" target="_blank">
+          <img
+            src="https://redux.js.org/img/redux.svg"
+            className="logo redux"
+            alt="Redux logo"
+          />
+        </a>
       </div>
-      <h1>Vite + React + Prettier</h1>
+      <h1>Vite + React + Prettier + Redux</h1>
       <div className="card">
         <button onClick={() => dispatch(increment())}>count is {count}</button>
         <p>

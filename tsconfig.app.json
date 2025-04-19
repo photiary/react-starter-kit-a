@@ -22,6 +22,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
+    /* src 폴더 @로 사용 */
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
