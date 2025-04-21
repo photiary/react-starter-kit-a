@@ -35,8 +35,15 @@ function App() {
         <a href="https://axios-http.com" target="_blank">
           <img src="/axios.svg" className="logo axios" alt="Axios logo" />
         </a>
+        <a href="https://vitest.dev" target="_blank">
+          <img
+            src="https://vitest.dev/logo.svg"
+            className="logo vitest"
+            alt="Vitest logo"
+          />
+        </a>
       </div>
-      <h1>Vite + React + Prettier + Redux + Axios</h1>
+      <h1>Vite + React + Prettier + Redux + Axios + Vitest</h1>
       <div className="card">
         <button onClick={() => dispatch(incrementAsync(1))}>
           count is {count}

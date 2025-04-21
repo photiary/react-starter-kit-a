@@ -2,7 +2,7 @@
 
 ### 사용 패키지
 
-React + TypeScript + Vite + ESLint + Prettier + Redux + Axios
+React + TypeScript + Vite + ESLint + Prettier + Redux + Axios + Vitest
 
 ### React
 
@@ -179,4 +179,12 @@ pnpm add axios
 
 ```shell
 pnpm add -D axios-mock-adapter
+```
+
+# 🧂 Vitest
+
+- https://vitest.dev/guide/
+
+```shell
+pnpm add -D vitest
 ```
