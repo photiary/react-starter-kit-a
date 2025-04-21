@@ -6,6 +6,7 @@
 - API 함수 위에 JSDoc 주석을 반드시 작성하고, 다음 예제와 같은 형식으로 작성한다.
 - 요구한 method, query string, request body, response body에 맞게 API function 생성한다.
 - 요구한 Domain 내 `*API.ts`에 API 호출 function을 생성하고, `*Mock.ts`에 mock function을 생성한다.
+- 생성한 API 호출 함수에 맞게 `*API.test.ts`에 `MockAdapter`를 이용하여 Unit test를 생성한다. 
 - 아래와 같은 요구 형식에 맞게 작성했는지 반드시 검증한다.
 - 생성된 API 함수에 맞게 mock function을 생성한다.
 - 생성 시 반드시 아래와 같은 순서와 구조를 준수한다.
@@ -77,4 +78,37 @@ const countMocks = (mock: AxiosMockAdapter) => {
 
     // 새로운 API에 맞게 mock 생성한다.
 }
+```
+
+```typescript
+// src/features/counter/counterAPI.test.ts
+
+import { describe, expect, test, beforeEach } from 'vitest'
+import MockAdapter from 'axios-mock-adapter'
+import { api } from '@/app/api'
+import { fetchCount } from './counterAPI'
+
+describe('counterAPI', () => {
+    let mockApi: MockAdapter
+
+    beforeEach(() => {
+        mockApi = new MockAdapter(api)
+    })
+
+    test('개수 조회', async () => {
+        const mockResponse = { data: 5 }
+        mockApi
+            .onGet('/api/count', { params: { amount: 5 } })
+            .reply(200, mockResponse)
+
+        const result = await fetchCount(5)
+        expect(result).toEqual(mockResponse)
+    })
+
+    test('개수 조회 500 에러 응답', async () => {
+        mockApi.onGet('/api/count').reply(500)
+
+        await expect(fetchCount()).rejects.toThrow()
+    })
+})
 ```
