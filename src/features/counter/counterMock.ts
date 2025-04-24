@@ -1,9 +1,12 @@
 import AxiosMockAdapter from 'axios-mock-adapter'
 import { Count } from './counterAPI'
+import { ApiResponse } from '@/app/api'
 
 const countMocks = (mock: AxiosMockAdapter) => {
   mock.onGet('/api/count').reply((config) => {
-    const data: Count = {
+    const data: ApiResponse<Count> = {
+      code: 200,
+      message: 'success',
       data: config.params?.amount || 1,
     }
     return [200, data]

@@ -11,7 +11,11 @@ describe('counterAPI', () => {
   })
 
   test('요청 데이터가 없는 기본 응답 데이터', async () => {
-    const mockResponse = { data: 1 }
+    const mockResponse = {
+      code: 200,
+      message: 'success',
+      data: 1,
+    }
     mockApi
       .onGet('/api/count', { params: { amount: 1 } })
       .reply(200, mockResponse)
@@ -21,7 +25,11 @@ describe('counterAPI', () => {
   })
 
   test('요청 데이터 따른 응답 데이터', async () => {
-    const mockResponse = { data: 5 }
+    const mockResponse = {
+      code: 200,
+      message: 'success',
+      data: 5,
+    }
     mockApi
       .onGet('/api/count', { params: { amount: 5 } })
       .reply(200, mockResponse)
@@ -31,7 +39,11 @@ describe('counterAPI', () => {
   })
 
   test('http status 500', async () => {
-    mockApi.onGet('/api/count').reply(500)
+    const mockResponse = {
+      code: 500100,
+      message: '서버에서 에러가 발생하였습니다.',
+    }
+    mockApi.onGet('/api/count').reply(500, mockResponse)
 
     await expect(fetchCount()).rejects.toThrow()
   })

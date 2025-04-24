@@ -1,5 +1,9 @@
 import simpleInstance from './axiosInstances'
 
-const api = simpleInstance
+export const api = simpleInstance
 
-export { api }
+export interface ApiResponse<T> {
+  code: number
+  message: string
+  data: T
+}

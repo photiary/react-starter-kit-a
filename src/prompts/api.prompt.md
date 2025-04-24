@@ -2,7 +2,7 @@
 
 ## 기본 규칙
 - API 이름과 기능 설명을 명확히 작성.
-- API Module은 `import { api } from '@/app/api'`를 사용한다.
+- API Module은 `import { api, ApiResponse } from '@/app/api'`를 사용한다.
 - API 함수 위에 JSDoc 주석을 반드시 작성하고, 다음 예제와 같은 형식으로 작성한다.
 - 요구한 method, query string, request body, response body에 맞게 API function 생성한다.
 - 요구한 Domain 내 `*API.ts`에 API 호출 function을 생성하고, `*Mock.ts`에 mock function을 생성한다.
@@ -15,31 +15,35 @@
 ## 요구 형식
 - API 기능 설명
   - domain: 같은 비즈니스단위의 그룹 (src/features/domain)
-  - [required] url: API URL
-  - [required] method: get | post | put | delete
-  - [optional] query string:
+  - [required] API URL
+  - [required] get | post | put | delete
+  - [optional] path params:
     ```
-    { param: type }
+    { param: type(example) }
     ```
-  - [optional] request body:
+  - [optional] query params:
     ```
-    { param: type }
+    { param: type(example) }
     ```
-  - [optional] response body:
+  - [optional] request:
     ```
-    { data: type }
+    { param: type(ex) }
+    ```
+  - [optional] response:
+    ```
+    { data: type(example) }
     ``` 
 
 ## 예제
 ### Me
 - 개수를 조회한다.
   - domain: counter
-  - url: /api/count
-  - method: get
-  - query string:
-    { amount: number }
+  - /api/count
+  - get
+  - query param:
+    { amount: number(0) }
   - response body:
-    { data: number }
+    { data: number(1) }
 
 ### AI Assistant
 ```typescript
@@ -58,7 +62,7 @@ export const fetchCount = async (amount: number = 1) => {
     const response = await api.get('/api/count', {
         params: { amount },
     })
-    return response.data as Count
+    return response.data as ApiResponse<Count>
 }
 
 // 새로운 API를 생성한다.
@@ -70,7 +74,9 @@ import { Count } from '@/features/counter/counterAPI.ts'
 
 const countMocks = (mock: AxiosMockAdapter) => {
     mock.onGet('/api/count').reply((config) => {
-        const data: Count = {
+        const data: ApiResponse<Count> = {
+            code: 200,
+            message: 'success',
             data: config.params?.amount || 1,
         }
         return [200, data]
@@ -96,7 +102,11 @@ describe('counterAPI', () => {
     })
 
     test('개수 조회', async () => {
-        const mockResponse = { data: 5 }
+        const mockResponse = {
+            code: 200,
+            message: 'success',
+            data: 5,
+        }
         mockApi
             .onGet('/api/count', { params: { amount: 5 } })
             .reply(200, mockResponse)
@@ -106,7 +116,11 @@ describe('counterAPI', () => {
     })
 
     test('개수 조회 500 에러 응답', async () => {
-        mockApi.onGet('/api/count').reply(500)
+        const mockResponse = {
+            code: 500100,
+            message: '서버에서 에러가 발생하였습니다.',
+        }
+        mockApi.onGet('/api/count').reply(500, mockResponse)
 
         await expect(fetchCount()).rejects.toThrow()
     })
