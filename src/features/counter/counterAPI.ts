@@ -1,4 +1,4 @@
-import { api } from '@/app/api'
+import { api, ApiResponse } from '@/app/api'
 
 export interface Count {
   data: number
@@ -8,11 +8,11 @@ export interface Count {
  * 개수를 조회한다.
  *
  * @param amount 초기 개수
- * @returns Count
+ * @returns ApiResponse<Count>
  */
 export const fetchCount = async (amount: number = 1) => {
   const response = await api.get('/api/count', {
     params: { amount },
   })
-  return response.data as Count
+  return response.data as ApiResponse<Count>
 }
