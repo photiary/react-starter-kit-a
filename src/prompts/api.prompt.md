@@ -1,51 +1,56 @@
 # API 생성 Prompt
 
-## 기본 규칙
-- API 이름과 기능 설명을 명확히 작성.
+## 1. 기본 규칙
 - API Module은 `import { api, ApiResponse } from '@/app/api'`를 사용한다.
-- API 함수 위에 JSDoc 주석을 반드시 작성하고, 다음 예제와 같은 형식으로 작성한다.
-- 요구한 method, query string, request body, response body에 맞게 API function 생성한다.
-- 요구한 Domain 내 `*API.ts`에 API 호출 function을 생성하고, `*Mock.ts`에 mock function을 생성한다.
-- 생성한 API 호출 함수에 맞게 `*API.test.ts`에 `MockAdapter`를 이용하여 Unit test를 생성한다. 
-- 아래와 같은 요구 형식에 맞게 작성했는지 반드시 검증한다.
-- 생성된 API 함수에 맞게 mock function을 생성한다.
-- 생성 시 반드시 아래와 같은 순서와 구조를 준수한다.
-- 최우선으로 위의 기본 규칙을 지킨다.
+- API 함수 위에 JSDoc 주석을 반드시 작성하고, 다음 '3. 예제'와 같은 형식으로 작성한다.
+- 요구한 method, path params, query params, request, response, error에 맞게 API function을 생성한다.
+- 요구한 Domain 안에 `*API.ts`에 API function을 생성하고, `*Mock.ts`에 Mock function을 생성한다.
+- 생성한 API function에 맞게 `*API.test.ts`에 `MockAdapter`를 이용하여 Unit test를 생성한다. 
+- 다음 '2. 요구 형식'에 맞게 prompt를 작성하였는지 반드시 검증한다.
+- 생성된 API function에 맞게 Mock function을 생성한다.
+- 생성 시 반드시 다음 '3. 예제'와 같이 순서와 구조를 준수한다.
+- 최우선으로 '1. 기본 규칙'을 반드시 준수한다.
 
-## 요구 형식
+## 2. 요구 형식
 - API 기능 설명
   - domain: 같은 비즈니스단위의 그룹 (src/features/domain)
   - [required] API URL
   - [required] get | post | put | delete
   - [optional] path params:
     ```
-    { param: type(example) }
+    { param: type (example) }
     ```
   - [optional] query params:
     ```
-    { param: type(example) }
+    { param: type (example) }
     ```
   - [optional] request:
     ```
-    { param: type(ex) }
+    { param: type (ex) }
     ```
   - [optional] response:
     ```
-    { data: type(example) }
+    { data: type (example) }
     ``` 
+  - [optional] error:
+    ```
+    { code: number (example), message: string (example)  }
+    ```
 
-## 예제
+## 3. 예제
 ### Me
 - 개수를 조회한다.
   - domain: counter
   - /api/count
   - get
   - query param:
-    { amount: number(0) }
-  - response body:
-    { data: number(1) }
+    { amount: number (0) }
+  - response:
+    { data: number (1) }
+  - error:
+    { code: number (500), message: string (서버에서 에러가 발생하였습니다.) }
 
-### AI Assistant
+### AI Agent
 ```typescript
 // src/features/counter/counterAPI.ts
 export interface Count {
@@ -56,7 +61,7 @@ export interface Count {
  * 개수를 조회한다.
  *
  * @param amount 초기 개수
- * @returns Count
+ * @returns ApiResponse<Count>
  */
 export const fetchCount = async (amount: number = 1) => {
     const response = await api.get('/api/count', {
@@ -117,7 +122,7 @@ describe('counterAPI', () => {
 
     test('개수 조회 500 에러 응답', async () => {
         const mockResponse = {
-            code: 500100,
+            code: 500,
             message: '서버에서 에러가 발생하였습니다.',
         }
         mockApi.onGet('/api/count').reply(500, mockResponse)

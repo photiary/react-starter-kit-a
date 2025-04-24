@@ -8,7 +8,7 @@ export interface Count {
  * 개수를 조회한다.
  *
  * @param amount 초기 개수
- * @returns Count
+ * @returns ApiResponse<Count>
  */
 export const fetchCount = async (amount: number = 1) => {
   const response = await api.get('/api/count', {
