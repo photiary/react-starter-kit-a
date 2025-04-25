@@ -2,7 +2,7 @@
 
 ### 사용 패키지
 
-React + TypeScript + Vite + ESLint + Prettier + Redux + Axios + Vitest
+React + TypeScript + Vite + ESLint + Prettier + Redux + Axios + Vitest + Tailwindcss
 
 ### React
 
@@ -187,4 +187,15 @@ pnpm add -D axios-mock-adapter
 
 ```shell
 pnpm add -D vitest
+```
+
+# 💨 Tailwindcss
+
+- https://tailwindcss.com/docs/installation/using-vite
+- https://github.com/tailwindlabs/prettier-plugin-tailwindcss
+
+```shell
+pnpm add tailwindcss @tailwindcss/vite
+
+pnpm add -D prettier prettier-plugin-tailwindcss
 ```

@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="flex flex-row justify-center gap-4">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -42,8 +42,15 @@ function App() {
             alt="Vitest logo"
           />
         </a>
+        <a href="https://tailwindcss.com" target="_blank">
+          <img
+            src="/tailwindcss.svg"
+            className="logo tailwindcss"
+            alt="Tailwindcss logo"
+          />
+        </a>
       </div>
-      <h1>Vite + React + Prettier + Redux + Axios + Vitest</h1>
+      <h1>Vite + React + Prettier + Redux + Axios + Vitest + Tailwindcss</h1>
       <div className="card">
         <button onClick={() => dispatch(incrementAsync(1))}>
           count is {count}
