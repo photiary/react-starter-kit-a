@@ -1,7 +1,7 @@
 import { api, ApiResponse } from '@/app/api'
 
 export interface Count {
-  data: number
+  amount: number
 }
 
 /**
