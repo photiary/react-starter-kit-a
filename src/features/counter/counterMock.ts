@@ -7,7 +7,9 @@ const countMocks = (mock: AxiosMockAdapter) => {
     const data: ApiResponse<Count> = {
       code: 200,
       message: 'success',
-      data: config.params?.amount || 1,
+      data: {
+        amount: config.params?.amount || 1,
+      },
     }
     return [200, data]
   })
