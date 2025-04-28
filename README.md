@@ -117,7 +117,7 @@ pnpm add -D eslint-plugin-prettier
 pnpm prettier . --write
 ```
 
-# Redux
+# 🍱 Redux
 
 - https://redux.js.org/introduction/installation#complementary-packages
 
@@ -164,7 +164,7 @@ export default defineConfig({
 
 ### template 리소스
 
-- https://github.com/reduxjs/redux-templates/tree/master/packages/vite-template-redux
+https://github.com/reduxjs/redux-templates/tree/master/packages/rtk-app-structure-example
 
 # 🥓 Axios
 
