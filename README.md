@@ -2,7 +2,7 @@
 
 ### 사용 패키지
 
-React + TypeScript + Vite + ESLint + Prettier + Redux + Axios + Vitest + Tailwindcss + Storybook
+React + TypeScript + Vite + ESLint + Prettier + Redux + Axios + Vitest + Tailwindcss + Storybook + shadcn/ui
 
 ### React
 
@@ -207,4 +207,15 @@ pnpm add -D prettier prettier-plugin-tailwindcss
 
 ```shell
 pnpm create storybook@latest
+```
+
+# 🍕shadcn/ui
+
+- https://ui.shadcn.com/docs/installation/vite
+
+```shell
+pnpm dlx shadcn@latest init
+
+# Card
+pnpm dlx shadcn@latest add card
 ```
