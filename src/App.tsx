@@ -56,10 +56,13 @@ function App() {
             alt="Storybook logo"
           />
         </a>
+        <a href="https://ui.shadcn.com" target="_blank">
+          <img src="/shadcn.svg" className="logo ui" alt="shadcn/ui logo" />
+        </a>
       </div>
       <h1>
         Vite + React + Prettier + Redux + Axios + Vitest + Tailwindcss +
-        Storybook
+        Storybook + shadcn/ui
       </h1>
       <div className="card">
         <button onClick={() => dispatch(incrementAsync(1))}>

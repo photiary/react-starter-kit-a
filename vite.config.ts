@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'), // src 폴더를 @로 사용
+      '@': path.resolve(__dirname, './src'), // src 폴더를 @로 사용
     },
   },
 })
