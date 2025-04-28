@@ -49,8 +49,18 @@ function App() {
             alt="Tailwindcss logo"
           />
         </a>
+        <a href="https://storybook.js.org" target="_blank">
+          <img
+            src="/storybook.svg"
+            className="logo storybook"
+            alt="Storybook logo"
+          />
+        </a>
       </div>
-      <h1>Vite + React + Prettier + Redux + Axios + Vitest + Tailwindcss</h1>
+      <h1>
+        Vite + React + Prettier + Redux + Axios + Vitest + Tailwindcss +
+        Storybook
+      </h1>
       <div className="card">
         <button onClick={() => dispatch(incrementAsync(1))}>
           count is {count}

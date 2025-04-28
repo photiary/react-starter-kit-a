@@ -14,7 +14,9 @@ describe('counterAPI', () => {
     const mockResponse = {
       code: 200,
       message: 'success',
-      data: 1,
+      data: {
+        amount: 1,
+      },
     }
     mockApi
       .onGet('/api/count', { params: { amount: 1 } })
