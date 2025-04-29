@@ -1,7 +1,17 @@
 import type { JSX } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card.tsx'
 
-export const UserCard = (): JSX.Element => {
+type UserCardProps = {
+  name: string
+  email: string
+  createDate: string
+}
+
+export const UserCard = ({
+  name,
+  email,
+  createDate,
+}: UserCardProps): JSX.Element => {
   return (
     <div>
       <Card className="w-[400px]">
@@ -13,17 +23,17 @@ export const UserCard = (): JSX.Element => {
 
           {/* 사용자 정보 (세로 정렬) */}
           <div className="flex flex-col justify-center space-y-1">
-            {/* 아이디 */}
-            <p className="text-sm font-medium">$[name]</p>
+            {/* 이름 */}
+            <p className="text-sm font-medium">{name}</p>
 
-            {/* 설명 */}
+            {/* 이메일 */}
             <p className="text-muted-foreground text-sm">
-              The React Framework - created and maintained by $[email]
+              The React Framework - created and maintained by {email}
             </p>
 
             {/* 가입 날짜 */}
             <div className="text-muted-foreground flex items-center text-sm">
-              <span>Joined $[createDate]</span>
+              <span>Joined {createDate}</span>
             </div>
           </div>
         </CardContent>
