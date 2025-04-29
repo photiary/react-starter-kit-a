@@ -216,6 +216,7 @@ pnpm create storybook@latest
 ```shell
 pnpm dlx shadcn@latest init
 
-# Card
+# Component
+pnpm dlx shadcn@latest add button
 pnpm dlx shadcn@latest add card
 ```

@@ -4,6 +4,8 @@ import './App.css'
 
 import { incrementAsync, selectCount } from '@/features/counter/counterSlice.ts'
 import { useAppDispatch, useAppSelector } from '@/app/hooks.ts'
+import { CounterButton } from '@/features/counter/components/ui/CounterButton.tsx'
+import { CounterButtonGroup } from '@/features/counter/components/CounterButtonGroup.tsx'
 
 function App() {
   const dispatch = useAppDispatch()
@@ -65,9 +67,12 @@ function App() {
         Storybook + shadcn/ui
       </h1>
       <div className="card">
-        <button onClick={() => dispatch(incrementAsync(1))}>
-          count is {count}
-        </button>
+        <CounterButton
+          className="mb-4"
+          amount={count}
+          onClick={() => dispatch(incrementAsync(1))}
+        ></CounterButton>
+        <CounterButtonGroup></CounterButtonGroup>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
