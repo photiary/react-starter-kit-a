@@ -7,7 +7,6 @@ export const UserCard = (): JSX.Element => {
       <Card className="w-[400px]">
         <CardContent className="flex flex-row items-start gap-6">
           {/* 프로필 이미지 */}
-
           <div className="w-16">
             <div className="h-16 w-16 rounded-full bg-black"></div>
           </div>
