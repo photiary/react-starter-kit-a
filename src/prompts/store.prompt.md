@@ -1,8 +1,7 @@
-# Redux 생성 Prompt
+# Prompt for Store layer generate
 
-## 1. 기본 규칙
+## 1. Basic rules
 
-- "react-redux": "^9.0.0" 사양으로 생성한다.
 - 리소스 이름은 `{domain}Slice.ts`로 생성한다.
 - 사양에 맞게 모든 Domain 안에 있는 `*API.ts`의 API를 사용한다.
 - 구조는 Template 리소스 `src/features/counter`를 참고한다.

@@ -1,6 +1,6 @@
-# API 생성 Prompt
+# Prompt for API layer generate
 
-## 1. 기본 규칙
+## 1. Basic rules
 
 - API Module은 `import { api, ApiResponse } from '@/app/api'`를 사용한다.
 - API 함수 위에 JSDoc 주석을 반드시 작성하고, 다음 '3. 예제'와 같은 형식으로 작성한다.
