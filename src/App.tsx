@@ -61,10 +61,17 @@ function App() {
         <a href="https://ui.shadcn.com" target="_blank">
           <img src="/shadcn.svg" className="logo ui" alt="shadcn/ui logo" />
         </a>
+        <a href="https://lucide.dev" target="_blank">
+          <img
+            src="/logo.light.svg"
+            className="logo lucide"
+            alt="lucide logo"
+          />
+        </a>
       </div>
       <h1>
         Vite + React + Prettier + Redux + Axios + Vitest + Tailwindcss +
-        Storybook + shadcn/ui
+        Storybook + shadcn/ui + lucide
       </h1>
       <div className="card">
         <CounterButton
