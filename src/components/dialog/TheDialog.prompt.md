@@ -8,3 +8,5 @@
 - props: isRightCancelButton okButton과 cancelButton을 좌우 변경
 - okButton 과 cancelButton 의 가로 사이즈는 7:3
 - Storybook 생성
+- cancelButton의 Label 왼쪽에 `<CircleX />` 추가
+- okButton의 Label 왼쪽에 `<CircleCheck x/>` 추가

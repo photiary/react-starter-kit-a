@@ -8,6 +8,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
+import { CircleCheck, CircleX } from 'lucide-react'
 
 export interface TheDialogProps {
   /** Whether the dialog is open */
@@ -71,12 +72,14 @@ export const TheDialog = ({
                 onClick={handleOk}
                 className="flex-[7]"
               >
+                <CircleCheck className="mr-2 h-4 w-4" />
                 {okButtonLabel}
               </AlertDialogAction>
               <AlertDialogCancel 
                 onClick={handleCancel}
                 className="flex-[3]"
               >
+                <CircleX className="mr-2 h-4 w-4" />
                 {cancelButtonLabel}
               </AlertDialogCancel>
             </>
@@ -86,12 +89,14 @@ export const TheDialog = ({
                 onClick={handleCancel}
                 className="flex-[3]"
               >
+                <CircleX className="mr-2 h-4 w-4" />
                 {cancelButtonLabel}
               </AlertDialogCancel>
               <AlertDialogAction 
                 onClick={handleOk}
                 className="flex-[7]"
               >
+                <CircleCheck className="mr-2 h-4 w-4" />
                 {okButtonLabel}
               </AlertDialogAction>
             </>
