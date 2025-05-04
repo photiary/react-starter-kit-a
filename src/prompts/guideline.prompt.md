@@ -29,7 +29,7 @@ src/
 │   └── mock.ts
 ├── assets/                  # Style resources
 ├── components/              # Common components
-│   └── ui/                  # 'shadcn' ui components
+│   └── ui/                  # 'shadcn/ui' components
 ├── features/                # Domain business components, store, api and hook
 │   └── counter/             # Pattern template **DO NOT edit**
 ├── prompts/                 # Prompt you should follow
@@ -51,4 +51,7 @@ The flow of control should always follow the pattern:
 2. src/prompts/api.prompt.md
 3. src/prompts/store.prompt.md
 4. src/prompts/component.prompt.md
+
+### Excluded Prompt
+`*.prompt.md` Prompt file에 **DO NOT generate** 문장이 있으면, 해당 Prompt는 따르지 않는다.
 

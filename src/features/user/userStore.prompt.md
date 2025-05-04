@@ -1,3 +1,4 @@
+**DO NOT generate**
 # 고통 요구사항
 
 - domain: user
