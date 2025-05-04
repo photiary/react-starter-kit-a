@@ -8,7 +8,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
-import { CircleCheck, CircleX, Info } from 'lucide-react'
+import { Ban, CircleAlert, CircleCheck, CircleX, Info } from 'lucide-react'
 
 export interface TheDialogProps {
   /** Whether the dialog is open */
@@ -79,7 +79,19 @@ export const TheDialog = ({
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent className={`${className}`}>
         {type === 'info' && (
-          <Info className="absolute top-0 left-0 h-12 w-12 -translate-x-1/2 -translate-y-1/2 text-green-500" />
+          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white">
+            <Info className="h-12 w-12 text-green-500" />
+          </div>
+        )}
+        {type === 'warning' && (
+          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white">
+            <CircleAlert className="h-12 w-12 text-orange-500" />
+          </div>
+        )}
+        {type === 'error' && (
+          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white">
+            <Ban className="h-12 w-12 text-red-500" />
+          </div>
         )}
         <AlertDialogHeader>
           <AlertDialogTitle className={getTitleColorClass()}>

@@ -12,4 +12,5 @@
 - okButton의 Label 왼쪽에 `<CircleCheck x/>` lucide 추가
 - props: type 'warning|error|info'- warning은 title 오렌지색, error는 붉은색, info는 초록색
 - `<Info />` lucide 추가(size 48px, position left top, translate(-50%, -50%))
-- type이 
+- type을 표시하는 아이콘 바탕은 하얀색
+- type이 warning은 `<CircleAlert size={48} />` error는 `<Ban size={48} />`
