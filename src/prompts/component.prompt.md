@@ -5,6 +5,10 @@
 - Use Tailwindcss.
 - 최우선으로 '1. 기본 규칙'을 반드시 준수한다.
 
+### Common UI Component Layer
+
+- `src/components/feature/`에 생성한다.
+
 ### UI Component Layer
 
 - `src/features/$[domain]/ui/$[fileName].tsx`로 생성하기 전에 리소스 존재를 확인한다.

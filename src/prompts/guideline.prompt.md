@@ -29,7 +29,7 @@ src/
 │   └── mock.ts
 ├── assets/                  # Style resources
 ├── components/              # Common components
-│   └── ui/                  # 'shadcn/ui' components
+│   └── ui/                  # 'shadcn/ui' components **DO NOT edit**
 ├── features/                # Domain business components, store, api and hook
 │   └── counter/             # Pattern template **DO NOT edit**
 ├── prompts/                 # Prompt you should follow
