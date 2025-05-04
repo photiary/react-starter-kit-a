@@ -3,6 +3,7 @@
 ## 1. Basic rule
 
 - Use Tailwindcss.
+- Style CSS를 추가할 경우, Component와 같은 위치에 `$[fileName].css`를 생성하고 Style를 정의한다.
 - 최우선으로 '1. 기본 규칙'을 반드시 준수한다.
 
 ### Common UI Component Layer
