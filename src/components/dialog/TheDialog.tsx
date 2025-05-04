@@ -29,6 +29,8 @@ export interface TheDialogProps {
   onCancel?: () => void;
   /** Whether to position the cancel button on the right */
   isRightCancelButton?: boolean;
+  /** The type of dialog affecting title color (warning: orange, error: red, info: green) */
+  type?: 'warning' | 'error' | 'info';
   /** Additional class name for styling */
   className?: string;
 }
@@ -46,6 +48,7 @@ export const TheDialog = ({
   onOk,
   onCancel,
   isRightCancelButton = false,
+  type,
   className,
 }: TheDialogProps) => {
   const handleOk = () => {
@@ -58,11 +61,25 @@ export const TheDialog = ({
     onOpenChange(false);
   };
 
+  // Determine title color based on type
+  const getTitleColorClass = () => {
+    switch (type) {
+      case 'warning':
+        return 'text-orange-500';
+      case 'error':
+        return 'text-red-500';
+      case 'info':
+        return 'text-green-500';
+      default:
+        return '';
+    }
+  };
+
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent className={className}>
         <AlertDialogHeader>
-          <AlertDialogTitle>{title}</AlertDialogTitle>
+          <AlertDialogTitle className={getTitleColorClass()}>{title}</AlertDialogTitle>
           <AlertDialogDescription>{description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex w-full gap-2">

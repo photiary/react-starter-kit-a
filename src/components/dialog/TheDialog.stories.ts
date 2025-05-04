@@ -17,6 +17,11 @@ const meta = {
     cancelButtonLabel: { control: 'text' },
     open: { control: 'boolean' },
     isRightCancelButton: { control: 'boolean' },
+    type: { 
+      control: 'select', 
+      options: ['warning', 'error', 'info'],
+      description: 'Dialog type affecting title color (warning: orange, error: red, info: green)'
+    },
     onOpenChange: { action: 'onOpenChange' },
     onOk: { action: 'onOk' },
     onCancel: { action: 'onCancel' },
@@ -48,6 +53,7 @@ export const Warning: Story = {
     description: 'You are about to delete this item. This action cannot be undone.',
     okButtonLabel: 'Delete',
     cancelButtonLabel: 'Cancel',
+    type: 'warning',
   },
 };
 
@@ -58,6 +64,18 @@ export const Information: Story = {
     description: 'Your account has been successfully created. You can now log in with your credentials.',
     okButtonLabel: 'OK',
     cancelButtonLabel: 'Close',
+    type: 'info',
+  },
+};
+
+export const Error: Story = {
+  args: {
+    open: true,
+    title: 'Error',
+    description: 'An error occurred while processing your request. Please try again later.',
+    okButtonLabel: 'Try Again',
+    cancelButtonLabel: 'Cancel',
+    type: 'error',
   },
 };
 
