@@ -79,17 +79,17 @@ export const TheDialog = ({
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent className={`${className}`}>
         {type === 'info' && (
-          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white">
+          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 animate-[rotateY_1000ms_ease-out_infinite_500ms] items-center justify-center rounded-full bg-white">
             <Info className="h-12 w-12 text-green-500" />
           </div>
         )}
         {type === 'warning' && (
-          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white">
+          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 animate-[rotateY_1000ms_ease-out_infinite_500ms] items-center justify-center rounded-full bg-white">
             <CircleAlert className="h-12 w-12 text-orange-500" />
           </div>
         )}
         {type === 'error' && (
-          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white">
+          <div className="absolute top-0 left-0 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 animate-[rotateY_1000ms_ease-out_infinite_500ms] items-center justify-center rounded-full bg-white">
             <Ban className="h-12 w-12 text-red-500" />
           </div>
         )}

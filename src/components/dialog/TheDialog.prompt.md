@@ -14,3 +14,4 @@
 - `<Info />` lucide 추가(size 48px, position left top, translate(-50%, -50%))
 - type을 표시하는 아이콘 바탕은 하얀색
 - type이 warning은 `<CircleAlert size={48} />` error는 `<Ban size={48} />`
+- type을 표시하는 아이콘에 y축 회전 transition 1000ms, ease-out, repeat delay 500ms
