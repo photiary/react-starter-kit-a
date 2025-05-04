@@ -8,31 +8,31 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
-import { CircleCheck, CircleX } from 'lucide-react'
+import { CircleCheck, CircleX, Info } from 'lucide-react'
 
 export interface TheDialogProps {
   /** Whether the dialog is open */
-  open: boolean;
+  open: boolean
   /** Function to call when the dialog state changes */
-  onOpenChange: (open: boolean) => void;
+  onOpenChange: (open: boolean) => void
   /** The title of the dialog */
-  title: string;
+  title: string
   /** The description text of the dialog */
-  description: string;
+  description: string
   /** The label for the OK button */
-  okButtonLabel: string;
+  okButtonLabel: string
   /** The label for the Cancel button */
-  cancelButtonLabel: string;
+  cancelButtonLabel: string
   /** Function to call when the OK button is clicked */
-  onOk?: () => void;
+  onOk?: () => void
   /** Function to call when the Cancel button is clicked */
-  onCancel?: () => void;
+  onCancel?: () => void
   /** Whether to position the cancel button on the right */
-  isRightCancelButton?: boolean;
+  isRightCancelButton?: boolean
   /** The type of dialog affecting title color (warning: orange, error: red, info: green) */
-  type?: 'warning' | 'error' | 'info';
+  type?: 'warning' | 'error' | 'info'
   /** Additional class name for styling */
-  className?: string;
+  className?: string
 }
 
 /**
@@ -52,67 +52,60 @@ export const TheDialog = ({
   className,
 }: TheDialogProps) => {
   const handleOk = () => {
-    onOk?.();
-    onOpenChange(false);
-  };
+    onOk?.()
+    onOpenChange(false)
+  }
 
   const handleCancel = () => {
-    onCancel?.();
-    onOpenChange(false);
-  };
+    onCancel?.()
+    onOpenChange(false)
+  }
 
   // Determine title color based on type
   const getTitleColorClass = () => {
     switch (type) {
       case 'warning':
-        return 'text-orange-500';
+        return 'text-orange-500'
       case 'error':
-        return 'text-red-500';
+        return 'text-red-500'
       case 'info':
-        return 'text-green-500';
+        return 'text-green-500'
       default:
-        return '';
+        return ''
     }
-  };
+  }
 
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent className={className}>
+      <AlertDialogContent className={`${className}`}>
+        {type === 'info' && (
+          <Info className="absolute top-0 left-0 h-12 w-12 -translate-x-1/2 -translate-y-1/2 text-green-500" />
+        )}
         <AlertDialogHeader>
-          <AlertDialogTitle className={getTitleColorClass()}>{title}</AlertDialogTitle>
+          <AlertDialogTitle className={getTitleColorClass()}>
+            {title}
+          </AlertDialogTitle>
           <AlertDialogDescription>{description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex w-full gap-2">
           {isRightCancelButton ? (
             <>
-              <AlertDialogAction 
-                onClick={handleOk}
-                className="flex-[7]"
-              >
+              <AlertDialogAction onClick={handleOk} className="flex-[7]">
                 <CircleCheck className="mr-2 h-4 w-4" />
                 {okButtonLabel}
               </AlertDialogAction>
-              <AlertDialogCancel 
-                onClick={handleCancel}
-                className="flex-[3]"
-              >
+              <AlertDialogCancel onClick={handleCancel} className="flex-[3]">
                 <CircleX className="mr-2 h-4 w-4" />
                 {cancelButtonLabel}
               </AlertDialogCancel>
             </>
           ) : (
             <>
-              <AlertDialogCancel 
-                onClick={handleCancel}
-                className="flex-[3]"
-              >
+              <AlertDialogCancel onClick={handleCancel} className="flex-[3]">
                 <CircleX className="mr-2 h-4 w-4" />
                 {cancelButtonLabel}
               </AlertDialogCancel>
-              <AlertDialogAction 
-                onClick={handleOk}
-                className="flex-[7]"
-              >
+              <AlertDialogAction onClick={handleOk} className="flex-[7]">
                 <CircleCheck className="mr-2 h-4 w-4" />
                 {okButtonLabel}
               </AlertDialogAction>
@@ -121,7 +114,7 @@ export const TheDialog = ({
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  );
-};
+  )
+}
 
-export default TheDialog;
+export default TheDialog
