@@ -1,3 +1,5 @@
+import './TheDialog.css'
+
 import {
   AlertDialog,
   AlertDialogAction,
