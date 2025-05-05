@@ -29,7 +29,7 @@ src/
 │   └── mock.ts
 ├── assets/                  # Style resources
 ├── components/              # Common components
-│   └── ui/                  # 'shadcn' ui components
+│   └── ui/                  # 'shadcn/ui' components **DO NOT edit**
 ├── features/                # Domain business components, store, api and hook
 │   └── counter/             # Pattern template **DO NOT edit**
 ├── prompts/                 # Prompt you should follow
@@ -52,3 +52,5 @@ The flow of control should always follow the pattern:
 3. src/prompts/store.prompt.md
 4. src/prompts/component.prompt.md
 
+### Excluded Prompt
+Ignore the `*.prompt.md` resources defined in `src/prompts/prompt.ignore`.
