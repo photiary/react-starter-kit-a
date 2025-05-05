@@ -68,10 +68,17 @@ function App() {
             alt="lucide logo"
           />
         </a>
+        <a href="https://reactrouter.com" target="_blank">
+          <img
+            src="/rr_logo_light.svg"
+            className="logo react-router"
+            alt="React Router logo"
+          />
+        </a>
       </div>
       <h1>
         Vite + React + Prettier + Redux + Axios + Vitest + Tailwindcss +
-        Storybook + shadcn/ui + lucide
+        Storybook + shadcn/ui + lucide + + React Router
       </h1>
       <div className="card">
         <CounterButton
@@ -80,13 +87,14 @@ function App() {
           onClick={() => dispatch(incrementAsync(1))}
         ></CounterButton>
         <CounterButtonGroup></CounterButtonGroup>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <p className="text-blue-500">
+        <a href="/home">React Router - Go Home</a>
       </p>
+      <p>
+        Edit <code>src/App.tsx</code> and save to test HMR
+      </p>
+      <p className="read-the-docs">Click on the Package logos to learn more</p>
     </>
   )
 }
