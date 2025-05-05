@@ -53,5 +53,4 @@ The flow of control should always follow the pattern:
 4. src/prompts/component.prompt.md
 
 ### Excluded Prompt
-`*.prompt.md` Prompt file에 **DO NOT generate** 문장이 있으면, 해당 Prompt는 따르지 않는다.
-
+Ignore the `*.prompt.md` resources defined in `src/prompts/prompt.ignore`.

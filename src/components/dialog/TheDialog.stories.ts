@@ -17,6 +17,7 @@ const meta = {
     cancelButtonLabel: { control: 'text' },
     open: { control: 'boolean' },
     isRightCancelButton: { control: 'boolean' },
+    isOneButton: { control: 'boolean', description: 'Show only the OK button' },
     type: { 
       control: 'select', 
       options: ['warning', 'error', 'info'],
@@ -87,5 +88,17 @@ export const RightCancelButton: Story = {
     okButtonLabel: 'Yes, Proceed',
     cancelButtonLabel: 'No, Cancel',
     isRightCancelButton: true,
+  },
+};
+
+export const OneButton: Story = {
+  args: {
+    open: true,
+    title: 'Notification',
+    description: 'Your changes have been saved successfully.',
+    okButtonLabel: 'Got it',
+    cancelButtonLabel: 'Cancel',
+    isOneButton: true,
+    type: 'info',
   },
 };

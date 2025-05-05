@@ -31,6 +31,8 @@ export interface TheDialogProps {
   onCancel?: () => void
   /** Whether to position the cancel button on the right */
   isRightCancelButton?: boolean
+  /** Whether to show only the OK button */
+  isOneButton?: boolean
   /** The type of dialog affecting title color (warning: orange, error: red, info: green) */
   type?: 'warning' | 'error' | 'info'
   /** Additional class name for styling */
@@ -50,6 +52,7 @@ export const TheDialog = ({
   onOk,
   onCancel,
   isRightCancelButton = false,
+  isOneButton = false,
   type,
   className,
 }: TheDialogProps) => {
@@ -102,7 +105,12 @@ export const TheDialog = ({
           <AlertDialogDescription>{description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex w-full gap-2">
-          {isRightCancelButton ? (
+          {isOneButton ? (
+            <AlertDialogAction onClick={handleOk} className="w-full">
+              <CircleCheck className="mr-2 h-4 w-4" />
+              {okButtonLabel}
+            </AlertDialogAction>
+          ) : isRightCancelButton ? (
             <>
               <AlertDialogAction onClick={handleOk} className="flex-[7]">
                 <CircleCheck className="mr-2 h-4 w-4" />

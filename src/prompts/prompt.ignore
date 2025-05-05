@@ -1,0 +1,3 @@
+# Ignore resources
+src/features/user/*.prompt.md
+src/features/user/components/*.prompt.md
