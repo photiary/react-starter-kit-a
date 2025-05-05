@@ -68,10 +68,17 @@ function App() {
             alt="lucide logo"
           />
         </a>
+        <a href="https://reactrouter.com" target="_blank">
+          <img
+            src="/rr_logo_light.svg"
+            className="logo react-router"
+            alt="React Router logo"
+          />
+        </a>
       </div>
       <h1>
         Vite + React + Prettier + Redux + Axios + Vitest + Tailwindcss +
-        Storybook + shadcn/ui + lucide
+        Storybook + shadcn/ui + lucide + + React Router
       </h1>
       <div className="card">
         <CounterButton

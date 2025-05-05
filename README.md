@@ -2,7 +2,7 @@
 
 ### 사용 패키지
 
-React + TypeScript + Vite + ESLint + Prettier + Redux + Axios + Vitest + Tailwindcss + Storybook + shadcn/ui + Lucide
+React + TypeScript + Vite + ESLint + Prettier + Redux + Axios + Vitest + Tailwindcss + Storybook + shadcn/ui + Lucide + React Router
 
 ### React
 
@@ -227,4 +227,12 @@ pnpm dlx shadcn@latest add card
 
 ```shell
 pnpm install lucide-react
+```
+
+# 🍢 React Router
+
+- https://reactrouter.com/start/data/installation
+
+```shell
+pnpm add react-router
 ```
