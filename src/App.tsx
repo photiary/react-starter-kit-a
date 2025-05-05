@@ -87,13 +87,14 @@ function App() {
           onClick={() => dispatch(incrementAsync(1))}
         ></CounterButton>
         <CounterButtonGroup></CounterButtonGroup>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <p className="text-blue-500">
+        <a href="/home">React Router - Go Home</a>
       </p>
+      <p>
+        Edit <code>src/App.tsx</code> and save to test HMR
+      </p>
+      <p className="read-the-docs">Click on the Package logos to learn more</p>
     </>
   )
 }
