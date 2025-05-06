@@ -37,6 +37,7 @@ src/
 ├── features/                # Domain business components, store, api and hook
 │   └── counter/             # Pattern template **DO NOT edit**
 ├── prompts/                 # Prompt you should follow
+├── routes/                  # Page components
 └── stories/                 # Storybook template **DO NOT edit**
 ```
 
