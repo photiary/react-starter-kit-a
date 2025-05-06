@@ -21,7 +21,7 @@ This document outlines the coding standards, architectural patterns, and best pr
 ### Excluded Technologies
 
 - **DO NOT use Jest**: use vitest instead
-- **DO NOT use react-router-dom**: use react-router instead 
+- **DO NOT use react-router-dom**: use react-router instead
 
 ## Architectural Patterns
 

@@ -15,6 +15,7 @@
 # 3. Layout
 
 - Home
+
 ```
 MainLayout.tsx
 └─ Home.tsx
@@ -23,20 +24,22 @@ MainLayout.tsx
 ```
 
 - Schedule
+
 ```
 MainLayout.tsx
 └─ Schedule.tsx
 ```
 
 - Map
+
 ```
 MainLayout.tsx
 └─ Map.tsx
 ```
 
 - Setting
+
 ```
 MainLayout.tsx
 └─ Setting.tsx
 ```
-
