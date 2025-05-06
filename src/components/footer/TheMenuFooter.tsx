@@ -9,8 +9,8 @@ export const TheMenuFooter = (): JSX.Element => {
   }
 
   return (
-    <div className="bg-opacity-80 sticky right-0 bottom-0 left-0 z-50 border-t border-gray-200 bg-white py-2 backdrop-blur-sm">
-      <div className="container mx-auto flex items-center justify-around">
+    <footer className="bg-opacity-80 fixed right-0 bottom-0 left-0 z-100 border-t border-gray-200 bg-white py-2 backdrop-blur-sm">
+      <nav className="container mx-auto flex items-center justify-around">
         <div
           className="flex cursor-pointer flex-col items-center"
           onClick={() => handleIconClick('home')}
@@ -59,7 +59,7 @@ export const TheMenuFooter = (): JSX.Element => {
           </div>
           <span className="mt-1 text-xs">설정</span>
         </div>
-      </div>
-    </div>
+      </nav>
+    </footer>
   )
 }

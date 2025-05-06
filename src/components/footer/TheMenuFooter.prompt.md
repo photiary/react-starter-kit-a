@@ -4,7 +4,7 @@
 
 - ComponentName: `src/components/footer/TheMenuFooter.tsx`
 - 하단에 표시할 메뉴이다.
-- 컨텐츠의 스크롤에 영향이 받지 않도록 `sticky` 사용한다.
+- 컨텐츠의 스크롤에 영향이 받지 않도록 `fixed` 사용한다.
 - 배경에 불투명을 추가하여 컨텐츠가 살짝 표시되도록 한다.
 - 메뉴는 홈, 스케줄, 지도, 설정 이다.
 - 홈 아이콘 `<House size={36} />`

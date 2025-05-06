@@ -5,7 +5,9 @@ import { TheMenuFooter } from '@/components/footer/TheMenuFooter.tsx'
 export const MainLayout = (): JSX.Element => {
   return (
     <>
-      <Outlet />
+      <main className="pb-16">
+        <Outlet />
+      </main>
       <TheMenuFooter />
       <ScrollRestoration />
     </>
