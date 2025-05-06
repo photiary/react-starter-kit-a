@@ -79,12 +79,8 @@
                         "characters": "Hover Card",
                         "characterStyleOverrides": [],
                         "styleOverrideTable": {},
-                        "lineTypes": [
-                          "NONE"
-                        ],
-                        "lineIndentations": [
-                          0
-                        ],
+                        "lineTypes": ["NONE"],
+                        "lineIndentations": [0],
                         "style": {
                           "fontFamily": "Inter",
                           "fontPostScriptName": "Inter-SemiBold",
@@ -151,12 +147,8 @@
                         "characters": "For sighted users to preview content available behind a link.",
                         "characterStyleOverrides": [],
                         "styleOverrideTable": {},
-                        "lineTypes": [
-                          "NONE"
-                        ],
-                        "lineIndentations": [
-                          0
-                        ],
+                        "lineTypes": ["NONE"],
+                        "lineIndentations": [0],
                         "style": {
                           "fontFamily": "Inter",
                           "fontPostScriptName": null,
@@ -321,12 +313,8 @@
                             "characters": "View docs",
                             "characterStyleOverrides": [],
                             "styleOverrideTable": {},
-                            "lineTypes": [
-                              "NONE"
-                            ],
-                            "lineIndentations": [
-                              0
-                            ],
+                            "lineTypes": ["NONE"],
+                            "lineIndentations": [0],
                             "style": {
                               "fontFamily": "Inter",
                               "fontPostScriptName": null,
@@ -696,12 +684,8 @@
                     "characters": "@nextjs",
                     "characterStyleOverrides": [],
                     "styleOverrideTable": {},
-                    "lineTypes": [
-                      "NONE"
-                    ],
-                    "lineIndentations": [
-                      0
-                    ],
+                    "lineTypes": ["NONE"],
+                    "lineIndentations": [0],
                     "style": {
                       "fontFamily": "Inter",
                       "fontPostScriptName": "Inter-SemiBold",
@@ -765,12 +749,8 @@
                     "characters": "The React Framework - created and maintained by @vercel",
                     "characterStyleOverrides": [],
                     "styleOverrideTable": {},
-                    "lineTypes": [
-                      "NONE"
-                    ],
-                    "lineIndentations": [
-                      0
-                    ],
+                    "lineTypes": ["NONE"],
+                    "lineIndentations": [0],
                     "style": {
                       "fontFamily": "Inter",
                       "fontPostScriptName": null,
@@ -1327,12 +1307,8 @@
                         "characters": "Joined December 2021",
                         "characterStyleOverrides": [],
                         "styleOverrideTable": {},
-                        "lineTypes": [
-                          "NONE"
-                        ],
-                        "lineIndentations": [
-                          0
-                        ],
+                        "lineTypes": ["NONE"],
+                        "lineIndentations": [0],
                         "style": {
                           "fontFamily": "Inter",
                           "fontPostScriptName": null,

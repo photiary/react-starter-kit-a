@@ -9,31 +9,55 @@ export const TheMenuFooter = (): JSX.Element => {
   }
 
   return (
-    <div className="sticky bottom-0 left-0 right-0 bg-white bg-opacity-80 backdrop-blur-sm border-t border-gray-200 py-2 z-50">
-      <div className="container mx-auto flex justify-around items-center">
-        <div className="flex flex-col items-center cursor-pointer" onClick={() => handleIconClick('home')}>
+    <div className="bg-opacity-80 sticky right-0 bottom-0 left-0 z-50 border-t border-gray-200 bg-white py-2 backdrop-blur-sm">
+      <div className="container mx-auto flex items-center justify-around">
+        <div
+          className="flex cursor-pointer flex-col items-center"
+          onClick={() => handleIconClick('home')}
+        >
           <div>
-            <House size={36} className={activeIcon === 'home' ? 'text-blue-500' : ''} />
+            <House
+              size={36}
+              className={activeIcon === 'home' ? 'text-blue-500' : ''}
+            />
           </div>
-          <span className="text-xs mt-1">홈</span>
+          <span className="mt-1 text-xs">홈</span>
         </div>
-        <div className="flex flex-col items-center cursor-pointer" onClick={() => handleIconClick('schedule')}>
+        <div
+          className="flex cursor-pointer flex-col items-center"
+          onClick={() => handleIconClick('schedule')}
+        >
           <div>
-            <CalendarDays size={36} className={activeIcon === 'schedule' ? 'text-blue-500' : ''} />
+            <CalendarDays
+              size={36}
+              className={activeIcon === 'schedule' ? 'text-blue-500' : ''}
+            />
           </div>
-          <span className="text-xs mt-1">스케줄</span>
+          <span className="mt-1 text-xs">스케줄</span>
         </div>
-        <div className="flex flex-col items-center cursor-pointer" onClick={() => handleIconClick('map')}>
+        <div
+          className="flex cursor-pointer flex-col items-center"
+          onClick={() => handleIconClick('map')}
+        >
           <div>
-            <Map size={36} className={activeIcon === 'map' ? 'text-blue-500' : ''} />
+            <Map
+              size={36}
+              className={activeIcon === 'map' ? 'text-blue-500' : ''}
+            />
           </div>
-          <span className="text-xs mt-1">지도</span>
+          <span className="mt-1 text-xs">지도</span>
         </div>
-        <div className="flex flex-col items-center cursor-pointer" onClick={() => handleIconClick('settings')}>
+        <div
+          className="flex cursor-pointer flex-col items-center"
+          onClick={() => handleIconClick('settings')}
+        >
           <div>
-            <Settings size={36} className={activeIcon === 'settings' ? 'text-blue-500' : ''} />
+            <Settings
+              size={36}
+              className={activeIcon === 'settings' ? 'text-blue-500' : ''}
+            />
           </div>
-          <span className="text-xs mt-1">설정</span>
+          <span className="mt-1 text-xs">설정</span>
         </div>
       </div>
     </div>

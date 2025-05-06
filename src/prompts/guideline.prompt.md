@@ -5,22 +5,26 @@ This document outlines the coding standards, architectural patterns, and best pr
 ## Technology Stack
 
 ### Frontend
+
 - **TypeScript** for language
 - **React v19** for building user interfaces
 - **Tailwindcss v4** for utility-first styling
 - **Vite v6** for frontend tooling and development environment
 
 ### Testing
+
 - **vitest v3** for test framework
 - **axios-mock-adapter** for Mocking an API request
 - **Storybook v8** for a UI Component test framework
 
 ### Excluded Technologies
+
 - **DO NOT use Jest**: use vitest instead
 
 ## Architectural Patterns
 
 ### Package Structure
+
 ```
 src/
 ├── app/
@@ -37,6 +41,7 @@ src/
 ```
 
 ### Layered Architecture
+
 The application follows a strict layered architecture with a clear flow of control
 
 - **API call Layer**: Backend Http request API call, use the Axios defined in `src/app/api.ts`
@@ -47,10 +52,12 @@ The application follows a strict layered architecture with a clear flow of contr
   **DO NOT access API Layer**
 
 The flow of control should always follow the pattern:
+
 1. `src/prompts/guideline.prompt.md`
 2. API call Layer (`src/prompts/api.prompt.md`)
 3. Store Layer (`src/prompts/store.prompt.md`)
 4. Component Layer (`src/prompts/component.prompt.md`)
 
 ### Excluded Prompt
+
 Ignore the `*.prompt.md` resources defined in `src/prompts/prompt.ignore`.
