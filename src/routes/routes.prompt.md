@@ -17,26 +17,26 @@
 - Home
 ```
 MainLayout.tsx
-└── Home.tsx
-    ├── src/features/notifiaction/NotificationCard.tsx
-    └── src/features/event/EventList.tsx
+└─ Home.tsx
+    ├─ src/features/notifiaction/NotificationCard.tsx
+    └─ src/features/event/EventList.tsx
 ```
 
 - Schedule
 ```
 MainLayout.tsx
-└── Schedule.tsx
+└─ Schedule.tsx
 ```
 
 - Map
 ```
 MainLayout.tsx
-└── Map.tsx
+└─ Map.tsx
 ```
 
 - Setting
 ```
 MainLayout.tsx
-└── Setting.tsx
+└─ Setting.tsx
 ```
 

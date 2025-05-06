@@ -29,19 +29,19 @@ This document outlines the coding standards, architectural patterns, and best pr
 
 ```
 src/
-├── app/
-│   ├── api.ts
-│   ├── axiosInstances.ts
-│   └── mock.ts
-├── assets/                  # Style resources
-├── components/              # Common components
-│   └── ui/                  # 'shadcn/ui' components **DO NOT edit**
-├── features/                # Domain business components, store, api and hook
-│   ├── counter/             # Pattern template **DO NOT edit**
-│   └── user/                # User domain
-├── prompts/                 # Prompt you should follow
-├── routes/                  # Page components
-└── stories/                 # Storybook template **DO NOT edit**
+├─ app/
+│  ├─ api.ts
+│  ├─ axiosInstances.ts
+│  └─ mock.ts
+├─ assets/                  # Style resources
+├─ components/              # Common components
+│  └─ ui/                   # 'shadcn/ui' components **DO NOT edit**
+├─ features/                # Domain business components, store, api and hook
+│  ├─ counter/              # Pattern template **DO NOT edit**
+│  └─ user/                 # User domain
+├─ prompts/                 # Prompt you should follow
+├─ routes/                  # Page components
+└─ stories/                 # Storybook template **DO NOT edit**
 ```
 
 ### Layered Architecture
