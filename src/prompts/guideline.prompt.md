@@ -8,6 +8,7 @@ This document outlines the coding standards, architectural patterns, and best pr
 
 - **TypeScript** for language
 - **React v19** for building user interfaces
+- **React Router v7** for routing
 - **Tailwindcss v4** for utility-first styling
 - **Vite v6** for frontend tooling and development environment
 
@@ -20,7 +21,7 @@ This document outlines the coding standards, architectural patterns, and best pr
 ### Excluded Technologies
 
 - **DO NOT use Jest**: use vitest instead
-- **DO NOT use react-router-dom*: use react-router instead 
+- **DO NOT use react-router-dom**: use react-router instead 
 
 ## Architectural Patterns
 
@@ -36,7 +37,8 @@ src/
 ├── components/              # Common components
 │   └── ui/                  # 'shadcn/ui' components **DO NOT edit**
 ├── features/                # Domain business components, store, api and hook
-│   └── counter/             # Pattern template **DO NOT edit**
+│   ├── counter/             # Pattern template **DO NOT edit**
+│   └── user/                # User domain
 ├── prompts/                 # Prompt you should follow
 ├── routes/                  # Page components
 └── stories/                 # Storybook template **DO NOT edit**

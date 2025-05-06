@@ -18,8 +18,8 @@
 ```
 MainLayout.tsx
 └── Home.tsx
-    ├── NotificationCard.tsx
-    └── EventList.tsx
+    ├── src/features/notifiaction/NotificationCard.tsx
+    └── src/features/event/EventList.tsx
 ```
 
 - Schedule
@@ -39,3 +39,4 @@ MainLayout.tsx
 MainLayout.tsx
 └── Setting.tsx
 ```
+
