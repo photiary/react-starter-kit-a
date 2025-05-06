@@ -47,10 +47,10 @@ The application follows a strict layered architecture with a clear flow of contr
   **DO NOT access API Layer**
 
 The flow of control should always follow the pattern:
-1. src/prompts/guideline.prompt.md
-2. src/prompts/api.prompt.md
-3. src/prompts/store.prompt.md
-4. src/prompts/component.prompt.md
+1. `src/prompts/guideline.prompt.md`
+2. API call Layer (`src/prompts/api.prompt.md`)
+3. Store Layer (`src/prompts/store.prompt.md`)
+4. Component Layer (`src/prompts/component.prompt.md`)
 
 ### Excluded Prompt
 Ignore the `*.prompt.md` resources defined in `src/prompts/prompt.ignore`.
