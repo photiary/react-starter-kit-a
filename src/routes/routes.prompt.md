@@ -19,7 +19,7 @@
 ```
 MainLayout.tsx
 └─ Home.tsx
-    ├─ src/features/notifiaction/NotificationCard.tsx
+    ├─ src/features/notification/NotificationCard.tsx
     └─ src/features/event/EventList.tsx
 ```
 
