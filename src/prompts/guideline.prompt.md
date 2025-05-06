@@ -23,6 +23,10 @@ This document outlines the coding standards, architectural patterns, and best pr
 - **DO NOT use Jest**: use vitest instead
 - **DO NOT use react-router-dom**: use react-router instead
 
+### Excluded Prompt
+
+Ignore the `*.prompt.md` resources defined in `src/prompts/prompt.ignore`.
+
 ## Architectural Patterns
 
 ### Package Structure
@@ -62,6 +66,11 @@ The flow of control should always follow the pattern:
 3. Store Layer (`src/prompts/store.prompt.md`)
 4. Component Layer (`src/prompts/component.prompt.md`)
 
-### Excluded Prompt
+## Final prompt task
 
-Ignore the `*.prompt.md` resources defined in `src/prompts/prompt.ignore`.
+All prompt tasks are done and RUN the prettier script.
+
+```shell
+# Prettier script
+pnpm format
+```
