@@ -1,6 +1,7 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Link } from 'react-router'
 
 import { incrementAsync, selectCount } from '@/features/counter/counterSlice.ts'
 import { useAppDispatch, useAppSelector } from '@/app/hooks.ts'
@@ -89,7 +90,7 @@ function App() {
         <CounterButtonGroup></CounterButtonGroup>
       </div>
       <p className="text-blue-500">
-        <a href="/home">React Router - Go Home</a>
+        <Link to="/home">React Router - Go Home</Link>
       </p>
       <p>
         Edit <code>src/App.tsx</code> and save to test HMR

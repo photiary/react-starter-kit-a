@@ -3,7 +3,7 @@
 # 1. Basic rule
 
 - Config file `src/app/routes.tsx`
-- Content page component가 없다면 생성한다.
+- Layout에 정의한 Component가 없다면 생성한다.
 
 # 2. Link
 
@@ -18,6 +18,8 @@
 ```
 MainLayout.tsx
 └── Home.tsx
+    ├── NotificationCard.tsx
+    └── EventList.tsx
 ```
 
 - Schedule
