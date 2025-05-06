@@ -2,6 +2,7 @@
 
 ## 1. Basic rule
 
+- Component의 기본 구조는 `src/prompts/Template.tsx`를 따른다.
 - Use Tailwindcss.
 - Style CSS를 추가할 경우, Component와 같은 위치에 `./{ComponentName}.css`를 생성하고 Style를 정의한다.
 - Generate Storybook.
@@ -9,7 +10,7 @@
 
 ### Common UI Component Layer
 
-- `src/components/feature/`에 생성한다.
+- `src/components/{feature}/`에 생성한다.
 
 ### UI Component Layer
 
