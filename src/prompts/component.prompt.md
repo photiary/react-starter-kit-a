@@ -4,6 +4,7 @@
 
 - Use Tailwindcss.
 - Style CSS를 추가할 경우, Component와 같은 위치에 `./{ComponentName}.css`를 생성하고 Style를 정의한다.
+- Generate Storybook.
 - 최우선으로 '1. 기본 규칙'을 반드시 준수한다.
 
 ### Common UI Component Layer
@@ -24,6 +25,6 @@
 
 ### Storybook
 
-- UI Component Layer만 Storybook을 생성한다.
+- UI Component Layer는 Storybook을 생성한다.
 - Storybook 구조는 Template 리소스 `src/stories/*`를 참고한다.
 - Storybook은 UI Component와 같은 위치에 `./{ComponentName}.stories.ts`로 생성한다.
