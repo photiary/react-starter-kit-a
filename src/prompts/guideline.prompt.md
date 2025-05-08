@@ -44,7 +44,7 @@ src/
 │  ├─ counter/              # Pattern template **DO NOT edit**
 │  └─ user/                 # User domain
 ├─ prompts/                 # Prompt you should follow
-├─ routes/                  # Page components
+├─ pages/                   # Page components
 └─ stories/                 # Storybook template **DO NOT edit**
 ```
 

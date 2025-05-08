@@ -5,14 +5,14 @@
 - Config file `src/app/routes.tsx`
 - Layout에 정의한 Component가 없다면, 기능이 없는 `src/prompts/Template.tsx` 구조의 Skeleton Component를 생성한다.
 
-# 2. Link
+# 2. Navigation
 
 - /home
 - /schedule
 - /map
 - /setting
 
-# 3. Layout
+# 3. Page layout
 
 - Home
 
