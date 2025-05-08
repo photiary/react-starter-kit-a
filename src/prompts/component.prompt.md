@@ -10,6 +10,7 @@
 
 ### Common UI Component Layer
 
+- `Button`, `Dialog`와 같이 모든 도메인에서 참조 가능한 Component
 - `src/components/{feature}/`에 생성한다.
 
 ### UI Component Layer
@@ -23,6 +24,11 @@
 
 - `src/features/{domain}/{ComponentName}.tsx`로 생성한다.
 - Store에 정의한 데이터를 호출하여 UI Component에 전달한다.
+
+### Page Component Layer
+
+- `src/pages/{RouteName}/{ComponentName}.tsx`로 생성한다.
+- Common UI Component, UI Component, Service Component를 사용하여 화면을 구성한다.
 
 ### Storybook
 
