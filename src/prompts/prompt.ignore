@@ -2,4 +2,7 @@
 src/features/user/*.prompt.md
 src/features/user/components/*.prompt.md
 src/components/dialog/*.prompt.md
-src/routes/routes.prompt.md
+src/pages/page.prompt.md
+
+src/features/notification/notificationAPI.prompt.md
+src/features/notification/notificationStore.prompt.md

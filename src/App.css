@@ -161,3 +161,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* 모바일에서 컨텐츠의 가로 너비를 설정 */
+.mobile-container {
+  @apply relative w-screen max-w-96;
+}

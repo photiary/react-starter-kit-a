@@ -66,9 +66,13 @@ The flow of control should always follow the pattern:
 3. Store Layer (`src/prompts/store.prompt.md`)
 4. Component Layer (`src/prompts/component.prompt.md`)
 
-## Final prompt task
+## Common Rules
 
-All prompt tasks are done and RUN the prettier script.
+- All props, params, and strings can contain **KOREAN**.
+
+## Final task plan
+
+All tasks are done and **Should be RUN** the prettier script.
 
 ```shell
 # Prettier script
