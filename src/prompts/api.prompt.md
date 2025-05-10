@@ -136,3 +136,8 @@ describe('counterAPI', () => {
   })
 })
 ```
+
+### 4. API Prompt files
+
+`src/features/user/userAPI.prompt.md`
+`src/features/notification/notificationAPI.prompt.md`

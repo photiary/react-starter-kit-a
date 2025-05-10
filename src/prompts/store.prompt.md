@@ -13,3 +13,8 @@
 - Store 기능 설명
   - domain: 같은 비즈니스단위의 그룹 (src/features/domain)
   - Async | Sync
+
+## 3. Store Prompt files
+
+`src/features/user/userStore.prompt.md`
+`src/features/notification/notificationStore.prompt.md`

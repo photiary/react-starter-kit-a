@@ -5,7 +5,7 @@ import { TheMenuFooter } from '@/components/footer/TheMenuFooter.tsx'
 export const MainLayout = (): JSX.Element => {
   return (
     <>
-      <main className="pb-16">
+      <main className="p-4 pb-16">
         <Outlet />
       </main>
       <TheMenuFooter />
