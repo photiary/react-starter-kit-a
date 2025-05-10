@@ -42,7 +42,7 @@
   - delete
 
 - USER-004) 사용자 목록을 조회한다.
-  - /api/users
+  - /api/user/list
   - get
   - query params
     ```

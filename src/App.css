@@ -3,13 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
+/* 👇 TODO 프로젝트 시작시 제거 👇 */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -45,7 +39,9 @@
 .read-the-docs {
   color: #888;
 }
+/* 👆 프로젝트 시작시 제거 👆 */
 
+/* shadcn/ui 패키지 설치로 생성된 리소스 */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -160,4 +156,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* 모바일에서 최대 가로로 표시하는 컨텐츠 Box에 가로 너비로 사용한다. */
+.mobile-container {
+  @apply max-w-96 min-w-72;
 }
