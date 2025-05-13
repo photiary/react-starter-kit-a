@@ -41,7 +41,7 @@ src/
 ├─ components/              # Common components
 │  └─ ui/                   # 'shadcn/ui' components **DO NOT edit**
 ├─ features/                # Domain business components, store, api and hook
-│  ├─ counter/              # Pattern template **DO NOT edit**
+│  ├─ counter/              # Resource structure template **DO NOT edit**
 │  └─ user/                 # User domain
 ├─ prompts/                 # Prompt you should follow
 ├─ pages/                   # Page components

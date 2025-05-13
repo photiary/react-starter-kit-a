@@ -3,13 +3,13 @@
 ## 1. Basic rules
 
 - API Module은 `import { api, ApiResponse } from '@/app/api'`를 사용한다.
-- API 함수 위에 JSDoc 주석을 반드시 작성하고, 다음 '3. 예제'와 같은 형식으로 작성한다.
+- API 함수 위에 JSDoc 주석을 작성하고, JSDoc는 다음 '3. 예제'와 같은 형식으로 생성한다.
 - 요구한 method, path params, query params, request, response, error에 맞게 API function을 생성한다.
 - 요구한 Domain 안에 `*API.ts`에 API function을 생성하고, `*Mock.ts`에 Mock function을 생성한다.
+- 생성한 API function에 맞게 Mock function을 생성한다.
 - 생성한 API function에 맞게 `*API.test.ts`에 `MockAdapter`를 이용하여 Unit test를 생성한다.
 - 다음 '2. 요구 형식'에 맞게 prompt를 작성하였는지 반드시 검증한다.
-- 생성된 API function에 맞게 Mock function을 생성한다.
-- 생성 시 반드시 다음 '3. 예제'와 같이 순서와 구조를 준수한다.
+- 다음 '3. 예제'와 같이 순서와 구조를 반드시 준수하여 생성한다.
 - 최우선으로 '1. 기본 규칙'을 반드시 준수한다.
 
 ## 2. 요구 형식
